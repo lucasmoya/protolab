@@ -59,7 +59,7 @@ const ArticlesSection = () => {
                 className="p-3 sm:p-4 rounded-full bg-card border border-border hover:bg-accent hover:border-accent transition-colors group"
               >
                 <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:text-accent-foreground transition-colors" />
-          </button>
+              </button>
             </div>
           )}
         </div>
@@ -70,34 +70,30 @@ const ArticlesSection = () => {
             className="flex transition-transform duration-300 ease-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
-          {articles.map((article) => (
+            {articles.map((article) => (
               <div key={article.id} className="w-full flex-shrink-0 px-2 sm:px-4">
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                  {/* Article Image - simplified */}
-                  <div className="order-2 lg:order-1">
-                    <div className="card-glass p-6 sm:p-8">
-                      <div className="bg-gradient-card rounded-xl overflow-hidden">
-                        <div className="aspect-video bg-muted/20 flex items-center justify-center overflow-hidden rounded-lg">
-                          <img
-                            src="/astronauta-articulo.png"
-                            alt="Portada del artículo"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                  </div>
-                </div>
-              </div>
-                  {/* Article Details */}
+                  {/* Article Details y Portada */}
                   <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
-                    <div className="space-y-2">
-                      {/* No category shown */}
-                      <h3 className="text-card-title">{article.title}</h3>
+                    <div className="flex flex-col-reverse sm:flex-col gap-4">
+                      <div className="space-y-2">
+                        {/* No category shown */}
+                        <h3 className="text-card-title">{article.title}</h3>
+                      </div>
+                      {/* Article Image - portada primero en mobile */}
+                      <div className="aspect-video bg-muted/20 flex items-center justify-center overflow-hidden rounded-lg">
+                        <img
+                          src="/astronauta-articulo.png"
+                          alt="Portada del artículo"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     </div>
-              {/* Article Meta */}
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs sm:text-sm text-muted-foreground mb-4 space-y-2 sm:space-y-0">
-                <span className="px-3 py-1 bg-accent/10 text-accent rounded-full font-medium self-start">
+                    {/* Article Meta */}
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs sm:text-sm text-muted-foreground mb-4 space-y-2 sm:space-y-0">
+                      <span className="px-3 py-1 bg-accent/10 text-accent rounded-full font-medium self-start">
                         {article.date} · {article.readTime}
-                </span>
+                      </span>
                     </div>
                     <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
                       {article.excerpt}
@@ -131,8 +127,8 @@ const ArticlesSection = () => {
                   </div>
                 </div>
               </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </div>
         {/* Dots Indicator */}
         {showNavigation && (
