@@ -99,22 +99,22 @@ const ProjectSection = () => {
                       </div>
                     </div>
                   )}
-                </div>
+                  </div>
                 {/* Project Content */}
                 <div className="space-y-3">
                   <h3 className="text-card-title group-hover:text-accent transition-colors line-clamp-2">
                     {project.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed line-clamp-3 text-sm sm:text-base">
-                    {project.description}
-                  </p>
+                      {project.description}
+                    </p>
                 </div>
                 {/* Read More Link */}
                 <div className="flex items-center justify-between pt-4 sm:pt-6">
                   <button className="flex items-center space-x-2 text-accent hover:text-accent/80 transition-colors font-medium">
                     <span>Ver proyecto</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                      </button>
                 </div>
               </article>
             </a>
