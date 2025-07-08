@@ -96,8 +96,8 @@ const ArticlesSection = () => {
                           alt="Portada del artículo"
                           className="w-full h-full object-cover"
                         />
-                      </div>
-                    </div>
+                </div>
+              </div>
                     <div className="space-y-2">
                       {/* No category shown */}
                       <h3 className="text-card-title">{article.title}</h3>
