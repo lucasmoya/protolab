@@ -43,7 +43,7 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h2 className="text-section-title mb-4 sm:mb-6">
-            Soluciones-Digitales<br />
+            Soluciones digitales —<br />
             <span className="gradient-text">integrales</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

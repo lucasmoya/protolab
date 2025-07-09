@@ -38,7 +38,7 @@ const ArticlesSection = () => {
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end mb-12 lg:mb-16 space-y-6 lg:space-y-0">
           <div>
             <h2 className="text-section-title mb-4">
-              Nuestro Último —<br />
+              Nuestro último —<br />
               <span className="gradient-text">artículo</span>
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg max-w-lg">
