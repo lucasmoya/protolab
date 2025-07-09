@@ -122,8 +122,8 @@ const ArticlesSection = () => {
                         </DialogTrigger>
                         <DialogPortal>
                           <DialogOverlay className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 animate-fade-in" />
-                          <DialogContent className="fixed left-1/2 top-1/2 max-h-[70vh] w-full max-w-2xl sm:max-w-3xl -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-background p-0 sm:p-0 shadow-xl focus:outline-none z-50 animate-scale-in overflow-y-auto mx-2 sm:mx-0">
-                            <div className="flex justify-between items-center mb-6 p-6 sm:p-10 pb-0">
+                          <DialogContent className="fixed left-1/2 top-1/2 max-h-[70vh] w-[calc(100vw-2rem)] max-w-sm sm:max-w-3xl -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-background p-4 sm:p-10 shadow-xl focus:outline-none z-50 animate-scale-in overflow-y-auto">
+                            <div className="flex justify-between items-center mb-6 pb-0">
                               <h2 className="text-xl font-bold leading-tight mr-4">{article.title}</h2>
                               <DialogClose asChild>
                                 <button aria-label="Cerrar" className="rounded-full p-2 hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-accent">
@@ -131,9 +131,7 @@ const ArticlesSection = () => {
                                 </button>
                               </DialogClose>
                             </div>
-                            <div className="p-6 sm:p-10 pt-0">
-                              <Article />
-                            </div>
+                            <Article />
                           </DialogContent>
                         </DialogPortal>
                       </Dialog>
