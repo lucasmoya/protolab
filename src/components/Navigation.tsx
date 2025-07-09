@@ -72,14 +72,18 @@ const Navigation = () => {
             {/* Mobile Social Links */}
             <div className="flex items-center space-x-6 pt-8">
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/lucasmoyaj/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
                 className="text-muted-foreground hover:text-accent"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={24} />
               </a>
               <a 
-                href="#" 
+                href="https://github.com/lucasmoya" 
+                target="_blank" 
+                rel="noopener noreferrer" 
                 className="text-muted-foreground hover:text-accent"
                 aria-label="GitHub"
               >
