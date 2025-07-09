@@ -26,7 +26,7 @@ const HeroSection = () => {
       
       <div className="container mx-auto text-center relative z-10 h-full flex flex-col justify-between">
         {/* Main Hero Text */}
-        <div className="mb-8 sm:mb-12 mt-0 sm:mt-0 -mt-16 sm:mt-0">
+        <div className="mb-8 sm:mb-12 mt-0 sm:mt-0 transform -translate-y-8 sm:translate-y-0">
           <div className="flex flex-col items-center w-full">
             <div className="w-full flex flex-row items-center justify-between">
               <span className="text-[2.5rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem] xl:text-[8rem] font-black text-white leading-none tracking-tight uppercase">  DISEÑO</span>
