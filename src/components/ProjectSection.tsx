@@ -154,12 +154,12 @@ const ProjectSection = () => {
                     {project.title}
                   </h3>
                   <span className="px-2 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full">
-                    {project.category}
-                  </span>
-                </div>
+                        {project.category}
+                      </span>
+                    </div>
                 <p className="text-muted-foreground leading-relaxed line-clamp-3 text-sm sm:text-base">
-                    {project.description}
-                </p>
+                      {project.description}
+                    </p>
               </div>
             );
 
@@ -172,7 +172,7 @@ const ProjectSection = () => {
                 }`}>
                   <span>{project.url ? 'Ver proyecto' : 'En desarrollo'}</span>
                   {project.url && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
-                </button>
+                      </button>
               </div>
             );
 

@@ -26,7 +26,7 @@ const HeroSection = () => {
       
       <div className="container mx-auto text-center relative z-10 h-full flex flex-col justify-between">
         {/* Main Hero Text */}
-        <div className="mb-8 sm:mb-12 mt-0 sm:mt-0 -mt-8 sm:mt-0">
+        <div className="mb-8 sm:mb-12 mt-0 sm:mt-0 -mt-48 sm:mt-0">
           <div className="flex flex-col items-center w-full">
             <div className="w-full flex flex-row items-center justify-between">
               <span className="text-[2.5rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem] xl:text-[8rem] font-black text-white leading-none tracking-tight uppercase">  DISEÑO</span>
@@ -40,7 +40,7 @@ const HeroSection = () => {
         </div>
         {/* Subtitle bottom right */}
         <div className="w-full flex justify-end">
-          <div className="max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl text-right mr-0 ml-auto mb-4 sm:mb-12">
+          <div className="max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl text-right mr-0 ml-auto mb-4 sm:mb-12 mt-2 sm:mt-8">
             <span className="block text-xs sm:text-sm md:text-base font-sans uppercase tracking-widest text-white/90 leading-snug">
               Protolab es mi base de lanzamiento para crear experiencias digitales innovadoras, funcionales y diseñadas para destacar.
             </span>
