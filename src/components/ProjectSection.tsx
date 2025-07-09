@@ -40,11 +40,11 @@ function ProjectImageSlider({ images }: { images: string[] }) {
         </div>
       </div>
       {images.length > 1 && (
-        <div className="flex justify-center gap-2 mt-2">
+        <div className="flex justify-center gap-1.5 mt-2">
           {images.map((_, idx) => (
             <button
               key={idx}
-              className={`w-2.5 h-2.5 rounded-full transition-colors ${selectedIndex === idx ? 'bg-accent' : 'bg-muted-foreground/30'}`}
+              className={`w-1.5 h-1.5 rounded-full transition-colors ${selectedIndex === idx ? 'bg-accent' : 'bg-muted-foreground/30'}`}
               onClick={() => emblaApi && emblaApi.scrollTo(idx)}
               aria-label={`Ir a la imagen ${idx + 1}`}
             />
@@ -125,74 +125,85 @@ const ProjectSection = () => {
         {/* Projects Grid (como artículos) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project) => {
-            const ProjectContent = (
-              <article
-                className={`card-glass p-4 sm:p-6 transition-colors h-full ${
-                  project.url ? 'cursor-pointer group hover:bg-accent/5' : 'cursor-not-allowed'
-                }`}
-              >
-                {/* Project Image o Iframe */}
-                <div className="aspect-video bg-gradient-card rounded-lg mb-4 sm:mb-6 overflow-hidden flex items-center justify-center p-4 sm:p-6">
-                  {project.images ? (
-                    <ProjectImageSlider images={project.images} />
-                  ) : project.image ? (
-                    <img
-                      src={project.image}
-                      alt={`${project.title} preview`}
-                      className="object-cover w-full h-full rounded-lg"
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-muted/20 flex items-center justify-center">
-                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-muted-foreground/30">
-                        {/* Imagen o icono del proyecto */}
-                      </div>
+            const ProjectImage = (
+              <div className="aspect-video bg-gradient-card rounded-lg mb-4 sm:mb-6 overflow-hidden flex items-center justify-center p-4 sm:p-6">
+                {project.images ? (
+                  <ProjectImageSlider images={project.images} />
+                ) : project.image ? (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    className="object-cover w-full h-full rounded-lg"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-muted/20 flex items-center justify-center">
+                    <div className="text-lg sm:text-xl lg:text-2xl font-bold text-muted-foreground/30">
+                      {/* Imagen o icono del proyecto */}
                     </div>
-                  )}
-                </div>
-                {/* Project Content */}
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <h3 className={`text-card-title line-clamp-2 ${
-                      project.url ? 'group-hover:text-accent transition-colors' : ''
-                    }`}>
-                      {project.title}
-                    </h3>
-                    <span className="px-2 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full">
-                      {project.category}
-                    </span>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed line-clamp-3 text-sm sm:text-base">
-                      {project.description}
-                  </p>
-                </div>
-                {/* Read More Link */}
-                <div className="flex items-center justify-between pt-4 sm:pt-6">
-                  <button className={`flex items-center space-x-2 font-medium ${
-                    project.url 
-                      ? 'text-accent hover:text-accent/80 transition-colors' 
-                      : 'text-muted-foreground/50 cursor-not-allowed'
-                  }`}>
-                    <span>{project.url ? 'Ver proyecto' : 'En desarrollo'}</span>
-                    {project.url && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
-                  </button>
-                </div>
-              </article>
+                )}
+              </div>
             );
 
-            return project.url ? (
-              <a
-                key={project.id}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block group"
-              >
-                {ProjectContent}
-              </a>
-            ) : (
-              <div key={project.id} className="block">
-                {ProjectContent}
+            const ProjectContent = (
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <h3 className={`text-card-title line-clamp-2 ${
+                    project.url ? 'group-hover:text-accent transition-colors' : ''
+                  }`}>
+                    {project.title}
+                  </h3>
+                  <span className="px-2 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full">
+                    {project.category}
+                  </span>
+                </div>
+                <p className="text-muted-foreground leading-relaxed line-clamp-3 text-sm sm:text-base">
+                    {project.description}
+                </p>
               </div>
+            );
+
+            const ProjectButton = (
+              <div className="flex items-center justify-between pt-4 sm:pt-6">
+                <button className={`flex items-center space-x-2 font-medium ${
+                  project.url 
+                    ? 'text-accent hover:text-accent/80 transition-colors' 
+                    : 'text-muted-foreground/50 cursor-not-allowed'
+                }`}>
+                  <span>{project.url ? 'Ver proyecto' : 'En desarrollo'}</span>
+                  {project.url && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
+                </button>
+              </div>
+            );
+
+            return (
+              <article
+                key={project.id}
+                className={`card-glass p-4 sm:p-6 transition-colors h-full ${
+                  project.url ? 'group' : 'cursor-not-allowed'
+                }`}
+              >
+                {/* Project Image - Not clickable */}
+                {ProjectImage}
+                
+                {/* Project Content - Clickable area */}
+                {project.url ? (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block group"
+                  >
+                    {ProjectContent}
+                    {ProjectButton}
+                  </a>
+                ) : (
+                  <>
+                    {ProjectContent}
+                    {ProjectButton}
+                  </>
+                )}
+              </article>
             );
           })}
         </div>
