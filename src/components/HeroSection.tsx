@@ -42,7 +42,7 @@ const HeroSection = () => {
         <div className="w-full flex justify-end">
           <div className="max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl text-right mr-0 ml-auto mb-8 sm:mb-12">
             <span className="block text-xs sm:text-sm md:text-base font-sans uppercase tracking-widest text-white/90 leading-snug">
-              Protolab es mi base de lanzamiento para crear experiencias web innovadoras, funcionales y diseñadas para destacar.
+              Protolab es mi base de lanzamiento para crear experiencias digitales innovadoras, funcionales y diseñadas para destacar.
             </span>
           </div>
         </div>
