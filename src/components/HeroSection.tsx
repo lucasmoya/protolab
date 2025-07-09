@@ -39,7 +39,7 @@ const HeroSection = () => {
           </div>
         </div>
         {/* Subtitle bottom right */}
-        <div className="w-full flex justify-end">
+        <div className="w-full flex justify-end transform -translate-y-8 sm:translate-y-0">
           <div className="max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl text-right mr-0 ml-auto mb-4 sm:mb-12">
             <span className="block text-xs sm:text-sm md:text-base font-sans uppercase tracking-widest text-white/90 leading-snug">
               Protolab es mi base de lanzamiento para crear experiencias digitales innovadoras, funcionales y diseñadas para destacar.
