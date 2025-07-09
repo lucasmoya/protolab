@@ -19,6 +19,15 @@ function ProjectImageSlider({ images }: { images: string[] }) {
     };
   }, [emblaApi, onSelect]);
 
+  useEffect(() => {
+    if (!emblaApi) return;
+    // Forzar recalculo al montar y al cambiar el tamaño de la ventana
+    const handleResize = () => emblaApi.reInit();
+    emblaApi.reInit();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [emblaApi]);
+
   return (
     <div>
       <div className="overflow-hidden rounded-lg" ref={emblaRef}>
