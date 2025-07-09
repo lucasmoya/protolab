@@ -61,7 +61,7 @@ const ProjectSection = () => {
       id: 1,
       title: 'Mucama',
       category: 'Plataforma Hotelera',
-      description: 'Mucama es una plataforma digital para hoteles que optimiza la gestión de lavandería y ropa blanca de forma simple, rápida y eficiente.',
+      description: 'Mucama es un Saas para hoteles que optimiza la gestión de lavandería y ropa blanca de forma simple, rápida y eficiente.',
       images: ['/mucama-screen.png', '/mucama-screen2.png'],
       url: 'https://www.mucama.cl/'
     },
@@ -75,6 +75,20 @@ const ProjectSection = () => {
     },
     {
       id: 3,
+      title: 'Volaria',
+      category: 'Plataforma de Viajes',
+      description: 'Volaria planifica vuelos, hoteles, itinerarios y experiencias en un solo lugar, potenciado por inteligencia artificial.',
+      image: '/volaria-screen.png'
+    },
+    {
+      id: 4,
+      title: 'Punto de Venta',
+      category: 'Sistema de Gestión',
+      description: 'Simplifica la toma de pedidos, el control de mesas y las ventas en tu hotel o restaurante, todo en un solo lugar.',
+      image: '/pos-screen.png'
+    },
+    {
+      id: 5,
       title: 'Kaja',
       category: 'Tecnología IoT',
       description: 'Kaja es un módulo inteligente creado en pandemia que detecta la proximidad de personas para fomentar el distanciamiento físico de forma visual y precisa.',
@@ -82,7 +96,7 @@ const ProjectSection = () => {
       url: 'https://github.com/lucasmoya/kaja'
     },
     {
-      id: 4,
+      id: 6,
       title: 'DXTEC1',
       category: 'Tecnología IoT',
       description: 'Este módulo inteligente detecta la temperatura del agua y alerta a personas con sensibilidad reducida en las extremidades, mejorando la autonomía.',
@@ -110,32 +124,22 @@ const ProjectSection = () => {
         </div>
         {/* Projects Grid (como artículos) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-          {projects.map((project) => (
-            <a
-              key={project.id}
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block group"
-            >
+          {projects.map((project) => {
+            const ProjectContent = (
               <article
-                className="card-glass p-4 sm:p-6 cursor-pointer group hover:bg-accent/5 transition-colors h-full"
+                className={`card-glass p-4 sm:p-6 transition-colors h-full ${
+                  project.url ? 'cursor-pointer group hover:bg-accent/5' : 'cursor-not-allowed'
+                }`}
               >
                 {/* Project Image o Iframe */}
                 <div className="aspect-video bg-gradient-card rounded-lg mb-4 sm:mb-6 overflow-hidden flex items-center justify-center p-4 sm:p-6">
                   {project.images ? (
                     <ProjectImageSlider images={project.images} />
-                  ) : project.title === 'Kaja' ? (
+                  ) : project.image ? (
                     <img
-                      src="/kaja-screen.png"
-                      alt="Kaja preview"
-                      className="object-contain max-w-full max-h-full mx-auto rounded-lg"
-                    />
-                  ) : project.title === 'DXTEC1' ? (
-                    <img
-                      src="/dxtec1-screen.png"
-                      alt="DXTEC1 preview"
-                      className="object-contain max-w-full max-h-full mx-auto rounded-lg"
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      className="object-cover w-full h-full rounded-lg"
                     />
                   ) : (
                     <div className="w-full h-full bg-muted/20 flex items-center justify-center">
@@ -147,23 +151,50 @@ const ProjectSection = () => {
                 </div>
                 {/* Project Content */}
                 <div className="space-y-3">
-                  <h3 className="text-card-title group-hover:text-accent transition-colors line-clamp-2">
-                    {project.title}
-                  </h3>
+                  <div className="flex items-center justify-between">
+                    <h3 className={`text-card-title line-clamp-2 ${
+                      project.url ? 'group-hover:text-accent transition-colors' : ''
+                    }`}>
+                      {project.title}
+                    </h3>
+                    <span className="px-2 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full">
+                      {project.category}
+                    </span>
+                  </div>
                   <p className="text-muted-foreground leading-relaxed line-clamp-3 text-sm sm:text-base">
                       {project.description}
-                    </p>
+                  </p>
                 </div>
                 {/* Read More Link */}
                 <div className="flex items-center justify-between pt-4 sm:pt-6">
-                  <button className="flex items-center space-x-2 text-accent hover:text-accent/80 transition-colors font-medium">
-                    <span>Ver proyecto</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </button>
+                  <button className={`flex items-center space-x-2 font-medium ${
+                    project.url 
+                      ? 'text-accent hover:text-accent/80 transition-colors' 
+                      : 'text-muted-foreground/50 cursor-not-allowed'
+                  }`}>
+                    <span>{project.url ? 'Ver proyecto' : 'En desarrollo'}</span>
+                    {project.url && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
+                  </button>
                 </div>
               </article>
-            </a>
-          ))}
+            );
+
+            return project.url ? (
+              <a
+                key={project.id}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
+              >
+                {ProjectContent}
+              </a>
+            ) : (
+              <div key={project.id} className="block">
+                {ProjectContent}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
