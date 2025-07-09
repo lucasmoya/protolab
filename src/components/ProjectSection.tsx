@@ -1,4 +1,50 @@
 import { ArrowRight } from 'lucide-react';
+import useEmblaCarousel from 'embla-carousel-react';
+import { useState, useCallback, useEffect } from 'react';
+
+function ProjectImageSlider({ images }: { images: string[] }) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    emblaApi.on('select', onSelect);
+    return () => {
+      emblaApi.off('select', onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
+  return (
+    <div>
+      <div className="overflow-hidden rounded-lg" ref={emblaRef}>
+        <div className="flex">
+          {images.map((src, idx) => (
+            <div className="min-w-0 flex-[0_0_100%] aspect-video flex items-center justify-center bg-muted/20" key={src}>
+              <img src={src} alt="Proyecto" className="object-contain w-full h-full" />
+            </div>
+          ))}
+        </div>
+      </div>
+      {images.length > 1 && (
+        <div className="flex justify-center gap-2 mt-2">
+          {images.map((_, idx) => (
+            <button
+              key={idx}
+              className={`w-2.5 h-2.5 rounded-full transition-colors ${selectedIndex === idx ? 'bg-accent' : 'bg-muted-foreground/30'}`}
+              onClick={() => emblaApi && emblaApi.scrollTo(idx)}
+              aria-label={`Ir a la imagen ${idx + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 const ProjectSection = () => {
   const projects = [
@@ -7,7 +53,7 @@ const ProjectSection = () => {
       title: 'Mucama',
       category: 'Plataforma Hotelera',
       description: 'Mucama es una plataforma digital para hoteles que optimiza la gestión de lavandería y ropa blanca de forma simple, rápida y eficiente.',
-      image: '/mucama-screen.png',
+      images: ['/mucama-screen.png', '/mucama-screen2.png'],
       url: 'https://www.mucama.cl/'
     },
     {
@@ -15,7 +61,7 @@ const ProjectSection = () => {
       title: 'Peirum',
       category: 'Plataforma Hotelera',
       description: 'Peirum es una plataforma integral para pequeños hoteles que centraliza la gestión de reservas, ventas y operaciones en una interfaz moderna e intuitiva.',
-      image: '/peirum-screen.png',
+      images: ['/peirum-screen.png', '/peirum-screen2.png'],
       url: 'https://peirum.github.io/home/'
     },
     {
@@ -68,18 +114,8 @@ const ProjectSection = () => {
               >
                 {/* Project Image o Iframe */}
                 <div className="aspect-video bg-gradient-card rounded-lg mb-4 sm:mb-6 overflow-hidden flex items-center justify-center p-4 sm:p-6">
-                  {project.title === 'Mucama' ? (
-                    <img
-                      src="/mucama-screen.png"
-                      alt="Mucama preview"
-                      className="object-contain max-w-full max-h-full mx-auto rounded-lg"
-                    />
-                  ) : project.title === 'Peirum' ? (
-                    <img
-                      src="/peirum-screen.png"
-                      alt="Peirum preview"
-                      className="object-contain max-w-full max-h-full mx-auto rounded-lg"
-                    />
+                  {project.images ? (
+                    <ProjectImageSlider images={project.images} />
                   ) : project.title === 'Kaja' ? (
                     <img
                       src="/kaja-screen.png"
@@ -99,7 +135,7 @@ const ProjectSection = () => {
                       </div>
                     </div>
                   )}
-                  </div>
+                </div>
                 {/* Project Content */}
                 <div className="space-y-3">
                   <h3 className="text-card-title group-hover:text-accent transition-colors line-clamp-2">
