@@ -78,7 +78,7 @@ const ProjectSection = () => {
       title: 'Volaria',
       category: 'Plataforma de Viajes',
       description: 'Volaria planifica vuelos, hoteles, itinerarios y experiencias en un solo lugar, potenciado por inteligencia artificial.',
-      image: '/volaria-screen.png'
+      images: ['/volaria-screen.png', '/volaria-screen2.png']
     },
     {
       id: 4,
