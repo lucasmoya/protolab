@@ -15,7 +15,7 @@ const ServicesSection = () => {
     {
       icon: Smartphone,
       title: 'Desarrollo web',
-      description: 'Desarrollo aplicaciones web responsivas,intuitivas y de alto rendimiento.'
+      description: 'Desarrollo aplicaciones web responsivas, intuitivas y de alto rendimiento.'
     },
     {
       icon: Globe,
