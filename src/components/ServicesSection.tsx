@@ -5,32 +5,32 @@ const ServicesSection = () => {
     {
       icon: Palette,
       title: 'Diseño de marca',
-      description: 'Creamos identidades visuales que conectan y comunican la esencia de tu marca.'
+      description: 'Creo identidades visuales que conectan y comunican la esencia de tu marca.'
     },
     {
       icon: Code,
       title: 'Producto digital',
-      description: 'Diseñamos y desarrollamos productos digitales modernos, funcionales y atractivos.'
+      description: 'Diseño y desarrollo productos digitales modernos, funcionales y atractivos.'
     },
     {
       icon: Smartphone,
       title: 'Desarrollo web',
-      description: 'Desarrollamos sitios web responsivos y aplicaciones móviles intuitivas y de alto rendimiento.'
+      description: 'Desarrollo aplicaciones web responsivas,intuitivas y de alto rendimiento.'
     },
     {
       icon: Globe,
       title: 'Plataformas y sistemas',
-      description: 'Implementamos plataformas y sistemas robustos para potenciar tu negocio.'
+      description: 'Implemento plataformas y sistemas robustos para potenciar tu negocio.'
     },
     {
       icon: Zap,
       title: 'Estrategia digital',
-      description: 'Definimos estrategias digitales para impulsar el crecimiento y la innovación.'
+      description: 'Defino estrategias digitales para impulsar el crecimiento y la innovación.'
     },
     {
       icon: Users,
       title: 'Escalabilidad y roadmaps técnicos',
-      description: 'Te ayudamos a escalar tu producto y planificar el crecimiento tecnológico.'
+      description: 'Te ayudo a escalar tu producto y planificar el crecimiento tecnológico.'
     }
   ];
 
@@ -47,7 +47,7 @@ const ServicesSection = () => {
             <span className="gradient-text">integrales</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Desde conceptos creativos hasta implementaciones técnicas, ofrecemos un ecosistema completo.
+            Desde conceptos creativos hasta implementaciones técnicas, un ecosistema completo.
           </p>
         </div>
         

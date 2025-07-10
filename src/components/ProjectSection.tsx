@@ -85,7 +85,7 @@ const ProjectSection = () => {
       title: 'Punto de Venta',
       category: 'Sistema de Gestión',
       description: 'Simplifica la toma de pedidos, el control de mesas y las ventas en tu hotel o restaurante, todo en un solo lugar.',
-      image: '/pos-screen.png'
+      images: ['/pos-screen.png', '/pos-screen2.png']
     },
     {
       id: 5,

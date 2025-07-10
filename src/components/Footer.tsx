@@ -34,13 +34,8 @@ const Footer = () => {
           </div>
           </div>
           {/* Legal Section */}
-          <div className="border-t border-border mt-10 pt-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+          <div className="border-t border-border mt-10 pt-6">
             <span className="text-xs text-muted-foreground">© {currentYear} Protolab. Creado por Lucas Moya.</span>
-            <div className="flex gap-6 text-xs">
-              <a href="#" className="text-muted-foreground hover:text-accent transition-colors">Política de Privacidad</a>
-              <a href="#" className="text-muted-foreground hover:text-accent transition-colors">Términos de Servicio</a>
-              <a href="#" className="text-muted-foreground hover:text-accent transition-colors">Cookies</a>
-        </div>
           </div>
         </div>
       </div>
