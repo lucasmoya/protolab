@@ -5,85 +5,93 @@ export default function Article() {
   return (
     <article className="prose lg:prose-xl max-w-none">
       <p>
-        El diseño digital contemporáneo está dejando de ser una disciplina puramente visual para convertirse en un campo híbrido entre programación, teoría de sistemas, física computacional y neurociencia aplicada. En este artículo exploro cómo la inteligencia artificial —específicamente los modelos generativos— está reconfigurando no solo el <em>cómo</em> diseñamos productos, sino <em>qué significa diseñar</em> en una era de algoritmos adaptativos y datos multidimensionales.
+        El diseño digital está atravesando una transformación radical. Lo que alguna vez fue una práctica guiada por la intuición estética, hoy se redefine como una disciplina computacional, híbrida entre arte, ciencia y algoritmos. En esta nueva era, el diseñador ya no solo crea objetos visuales, sino que modela sistemas complejos con lógica matemática y colaboración de inteligencia artificial.
       </p>
       <br></br>
-      <h2>1. Del diseño basado en intuición al diseño basado en sistemas dinámicos:</h2>
+      <h2><strong>1. Del diseñador intuitivo al diseñador sistémico</strong></h2>
       <br></br>
       <p>
-        Tradicionalmente, el diseño digital ha dependido de la heurística: decisiones tomadas desde la experiencia, la observación del usuario y el lenguaje visual. Sin embargo, la incorporación de modelos generativos como <strong>diffusion models</strong>, redes <strong>transformer</strong> y técnicas de <strong>optimización evolutiva</strong> ha dado paso a una nueva forma de creación:
+        Tradicionalmente, el diseño digital se apoyó en la observación del usuario, la teoría visual y la experiencia heurística. Sin embargo, la llegada de modelos generativos —como redes transformer, algoritmos evolutivos y diffusion models— ha cambiado radicalmente este paradigma.
       </p>
       <br></br>
       <blockquote>
-        “Un sistema puede generar miles de alternativas de diseño, ponderadas por criterios que van desde estética percibida hasta eficiencia energética.”<br />
-        — <em>A. Ramesh et al., "Zero-Shot Text-to-Image Generation," NeurIPS 2021</em>
+        "Un sistema puede generar miles de alternativas de diseño, ponderadas por criterios que van desde estética percibida hasta eficiencia energética."<br />
+        — <em>A. Ramesh et al., Zero-Shot Text-to-Image Generation, NeurIPS 2021</em>
       </blockquote>
       <br></br>
       <p>
-        Esto implica que el diseño ya no se basa en decisiones puntuales, sino en <strong>espacios de solución</strong>, definidos por funciones matemáticas y restricciones lógicas. En otras palabras: diseñar hoy puede implicar resolver un sistema dinámico no lineal donde la experiencia de usuario es una función multivariable.
+        Ya no se trata de tomar decisiones aisladas, sino de definir espacios de búsqueda donde cada solución emerge de un equilibrio entre múltiples variables. Diseñar hoy implica programar condiciones iniciales, restricciones y criterios de evaluación en un sistema dinámico no lineal.
       </p>
       <br></br>
-      <h2>2. El rol de la física computacional en el diseño de interacción:</h2>
+      <h2><strong>2. Interacción como sistema físico: diseño con ecuaciones</strong></h2>
       <br></br>
       <p>
-        Uno de los aspectos más intrigantes es el uso de modelos físicos para definir comportamientos interactivos. Las microinteracciones, transiciones de interfaz y simulaciones en productos complejos se modelan hoy mediante ecuaciones diferenciales ordinarias (ODEs) y técnicas de integración numérica como Runge-Kutta.
+        En muchos casos, la experiencia de usuario no se describe con palabras, sino con física. Las microinteracciones, animaciones y comportamientos responsivos se modelan mediante ecuaciones diferenciales y simulaciones físicas.
       </p>
-      <p>Por ejemplo, en interfaces físicas se utiliza la fórmula de masa-resorte:</p>
+      <p>Un ejemplo común es el sistema masa-resorte para simular transiciones naturales:</p>
       <BlockMath math="F = -kx - bv" />
       <br></br>
       <p>
-        Donde <InlineMath math="k" /> es la constante elástica, <InlineMath math="b" /> el coeficiente de fricción, <InlineMath math="x" /> el desplazamiento y <InlineMath math="v" /> la velocidad. Este tipo de modelos se implementa con librerías como <strong>p5.js</strong> o motores como <strong>Unity3D</strong> y se evalúan en tiempo real.
+        Donde <InlineMath math="k" /> es la constante de elasticidad, <InlineMath math="b" /> el coeficiente de fricción, <InlineMath math="x" /> el desplazamiento y <InlineMath math="v" /> la velocidad. Este tipo de modelo, implementado en motores como Unity3D o librerías como Framer Motion, permite diseñar comportamientos que se "sienten" correctos porque responden a las leyes físicas que intuimos desde la infancia.
       </p>
       <br></br>
-      <h2>3. Algoritmos generativos como co-diseñadores:</h2>
+      <h2><strong>3. El diseñador como editor algorítmico</strong></h2>
       <br></br>
       <p>
-        Con herramientas como <strong>Figma AI</strong>, <strong>Uizard</strong> o <strong>Builder.io</strong>, el diseñador se convierte en colaborador de la IA. Estos sistemas no solo ejecutan tareas, sino que proponen soluciones autónomas:
+        Herramientas como Figma AI, Uizard o Builder.io marcan una transición en el rol del diseñador: de autor a editor. La IA no solo ejecuta comandos, sino que propone soluciones, variantes y patrones visuales.
       </p>
       <br></br>
       <blockquote>
         "El diseño generativo convierte al diseñador en un editor, un seleccionador dentro de un espacio de posibilidades multidimensional generado por la IA."<br />
-        — <em>J. Maeda, "Design in Tech Report," 2023</em>
+        — <em>J. Maeda, Design in Tech Report, 2023</em>
       </blockquote>
       <br></br>
       <p>
-        Este cambio exige conocimientos técnicos nuevos: redes neuronales, estadística bayesiana, teoría de grafos y lógica difusa.
+        Esto requiere nuevas competencias: entender modelos probabilísticos, lógica difusa, redes neuronales y estadística bayesiana. El diseño se convierte en un proceso de curaduría algorítmica, donde se seleccionan y refinan resultados generados por sistemas inteligentes.
       </p>
       <br></br>
-      <h2>4. De lo visual a lo matemático: el diseño como topología funcional:</h2>
+      <h2><strong>4. Espacios topológicos y estructuras matemáticas del diseño</strong></h2>
       <br></br>
       <p>
-        Algunos diseñadores están mapeando decisiones visuales a espacios matemáticos, permitiendo tratar productos como <strong>espacios topológicos</strong>. Por ejemplo, el flujo de usuario puede representarse como un grafo dirigido:
+        Algunos diseñadores están explorando estructuras matemáticas para representar experiencias. Un flujo de usuario, por ejemplo, puede modelarse como un grafo dirigido:
       </p>
       <BlockMath math={"G = (V, E), \\quad w : E \\rightarrow \\mathbb{R}^{+}"} />
       <br></br>
       <p>
-        Este enfoque permite aplicar algoritmos como Dijkstra o A*, o incluso aprendizaje por refuerzo para optimizar caminos en interfaces personalizadas.
+        Esta representación permite aplicar algoritmos como Dijkstra o A* para optimizar caminos de navegación. Incluso técnicas de aprendizaje por refuerzo pueden entrenar sistemas que optimicen experiencias en función del comportamiento del usuario.
       </p>
-    <br></br>
-      <h2>5. Implicaciones éticas y estéticas:</h2>
+      <p>
+        Este enfoque convierte al diseño en una disciplina capaz de predecir y adaptar su comportamiento a través de funciones matemáticas y aprendizaje automático.
+      </p>
+      <br></br>
+      <h2><strong>5. Belleza, ética y sesgo: nuevas preguntas del diseño computacional</strong></h2>
       <br></br>
       <p>
-        Esta evolución plantea preguntas críticas: ¿Dónde queda la intuición humana? ¿Cómo validamos la belleza cuando es generada por un modelo estadístico? ¿Qué pasa con la diversidad estética en datasets sesgados?
+        Con este cambio de paradigma emergen preguntas urgentes: ¿cómo definimos belleza cuando es producto de un modelo estadístico? ¿Qué pasa con la diversidad estética si los datasets están sesgados? ¿Qué significa "buena experiencia" cuando el sistema se optimiza para métricas de retención más que para bienestar?
       </p>
       <br></br>
       <p>
-        Como diseñador, me pregunto si la estética algorítmica reemplazará lo artesanal o si estamos entrando en una nueva era donde ambas coexisten.
+        La estética algorítmica plantea el riesgo de homogeneidad. Cuando todos los sistemas aprenden del mismo conjunto de datos, tienden a producir soluciones similares. El diseñador debe entonces asumir un nuevo rol ético: intervenir, desviar, proponer lo inesperado dentro de lo probable.
       </p>
       <br></br>
-      <h2>Conclusión</h2>
+      <h2><strong>Conclusión</strong></h2>
       <br></br>
       <p>
-        El diseño digital del futuro no es solo arte ni solo ingeniería: es la síntesis de múltiples lenguajes —visual, computacional, físico y emocional— mediada por sistemas inteligentes. Diseñar con IA es, en esencia, <strong>programar la creatividad</strong> en tiempo real.
+        El diseño digital ya no es solo arte ni solo ingeniería. Es una práctica transdisciplinar que combina sensibilidad estética, comprensión de sistemas, pensamiento lógico y conciencia ética. Diseñar con IA es, en esencia, modelar el comportamiento de sistemas inteligentes en función de valores humanos.
+      </p>
+      <p>
+        Programar la creatividad no significa automatizar el diseño, sino ampliar sus límites. Estamos entrando en una era donde el diseño se codifica, pero también se humaniza desde nuevas coordenadas: espacio, tiempo, emoción y datos.
       </p>
       <br></br>
-      <h2>Referencias</h2>
+      <h2><strong>Referencias</strong></h2>
       <br></br>
       <ul>
-        <li>Ramesh, A., Pavlov, M., Goh, G. et al. (2021). <em>Zero-Shot Text-to-Image Generation</em>. NeurIPS.</li>
-        <li>Maeda, J. (2023). <em>Design in Tech Report</em>.</li>
-        <li>Tversky, A., Kahneman, D. (1974). <em>Judgment under Uncertainty: Heuristics and Biases</em>.</li>
-        <li>Ma, Y., & Belkin, M. (2020). <em>Neural Tangent Kernel: Convergence and Generalization in Neural Networks</em>. ICML.</li>
+        <li><em>Ramesh, A., Pavlov, M., Goh, G. et al. (2021). Zero-Shot Text-to-Image Generation. NeurIPS.</em></li>
+        <li><em>Maeda, J. (2023). Design in Tech Report.</em></li>
+        <li><em>Tversky, A., Kahneman, D. (1974). Judgment under Uncertainty: Heuristics and Biases.</em></li>
+        <li><em>Ma, Y., & Belkin, M. (2020). Neural Tangent Kernel: Convergence and Generalization in Neural Networks. ICML.</em></li>
+        <li><em>Framer Motion (2024). Motion Library for React. https://www.framer.com/motion/</em></li>
+        <li><em>Unity Technologies. (2023). Unity Physics Engine Documentation.</em></li>
       </ul>
     </article>
   );
