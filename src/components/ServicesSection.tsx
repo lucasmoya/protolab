@@ -5,32 +5,32 @@ const ServicesSection = () => {
     {
       icon: Palette,
       title: 'Diseño de marca',
-      description: 'Creo identidades visuales que conectan y comunican la esencia de tu marca.'
+      description: 'Identidades visuales sólidas que transmiten la esencia y visión de la marca.'
     },
     {
       icon: Code,
       title: 'Producto digital',
-      description: 'Diseño y desarrollo productos digitales modernos, funcionales y atractivos.'
+      description: 'Diseño y desarrollo de productos digitales modernos, funcionales y centrados en la experiencia del usuario.'
     },
     {
       icon: Smartphone,
       title: 'Desarrollo web',
-      description: 'Desarrollo aplicaciones web responsivas, intuitivas y de alto rendimiento.'
+      description: 'Aplicaciones web responsivas, intuitivas y optimizadas para alto rendimiento.'
     },
     {
       icon: Globe,
       title: 'Plataformas y sistemas',
-      description: 'Implemento plataformas y sistemas robustos para potenciar tu negocio.'
+      description: 'Arquitectura e implementación de sistemas escalables y plataformas robustas.'
     },
     {
       icon: Zap,
       title: 'Estrategia digital',
-      description: 'Defino estrategias digitales para impulsar el crecimiento y la innovación.'
+      description: 'Diseño de estrategias digitales orientadas a crecimiento, diferenciación e innovación.'
     },
     {
       icon: Users,
       title: 'Escalabilidad y roadmaps técnicos',
-      description: 'Te ayudo a escalar tu producto y planificar el crecimiento tecnológico.'
+      description: 'Planificación técnica para escalar productos de forma sostenible y alineada al negocio.'
     }
   ];
 
