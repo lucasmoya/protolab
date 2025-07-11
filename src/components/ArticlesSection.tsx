@@ -8,8 +8,8 @@ const articleContent = `El diseño digital contemporáneo está dejando de ser u
   const articles = [
     {
       id: 1,
-    title: 'Diseño generativo asistido por IA: Hacia una fusión entre estética, algoritmos y sistemas adaptativos',
-    excerpt: 'El diseño digital contemporáneo está dejando de ser una disciplina puramente visual para convertirse en un campo híbrido entre programación, teoría de sistemas, física computacional y neurociencia aplicada.',
+    title: 'Diseño asistido por IA: Hacia una fusión entre estética, algoritmos y sistemas adaptativos',
+    excerpt: 'El diseño digital ya no se trata solo de estética. En la era de la IA, diseñar es programar sistemas, modelar comportamientos y editar soluciones generadas por algoritmos. Este artículo explora cómo la inteligencia artificial está transformando radicalmente el rol del diseñador.',
     date: 'Publicado el 8 de julio de 2025',
     readTime: 'Lectura de 6–7 min',
     content: articleContent
