@@ -34,7 +34,7 @@ function ProjectImageSlider({ images }: { images: string[] }) {
         <div className="flex h-full">
           {images.map((src, idx) => (
             <div className="min-w-0 flex-[0_0_100%] h-full flex items-center justify-center bg-muted/20 rounded-lg overflow-hidden" key={src}>
-              <img src={src} alt="Proyecto" className="h-full w-auto max-w-none object-contain rounded-lg" />
+              <img src={src} alt="Proyecto" className="h-full w-auto max-w-none object-contain rounded-lg border-4 border-white/35 shadow-[0_0_0_1px_rgba(255,255,255,0.12)]" />
             </div>
           ))}
         </div>
@@ -143,14 +143,14 @@ const ProjectSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project) => {
             const ProjectImage = (
-              <div className="h-56 sm:h-64 lg:h-72 bg-gradient-card rounded-lg mb-4 sm:mb-6 overflow-hidden flex items-center justify-center p-4 sm:p-6">
+              <div className="h-56 sm:h-64 lg:h-72 bg-gradient-card/90 rounded-lg mb-4 sm:mb-6 overflow-hidden flex items-center justify-center p-4 sm:p-6 border border-white/15 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
                 {project.images ? (
                   <ProjectImageSlider images={project.images} />
                 ) : project.image ? (
                   <img
                     src={project.image}
                     alt={`${project.title} preview`}
-                    className="h-full w-auto max-w-none rounded-lg object-contain"
+                    className="h-full w-auto max-w-none rounded-lg object-contain border-4 border-white/35 shadow-[0_0_0_1px_rgba(255,255,255,0.12)]"
                   />
                 ) : (
                   <div className="w-full h-full bg-muted/20 flex items-center justify-center">
