@@ -29,12 +29,12 @@ function ProjectImageSlider({ images }: { images: string[] }) {
   }, [emblaApi]);
 
   return (
-    <div>
-      <div className="overflow-hidden rounded-lg" ref={emblaRef}>
-        <div className="flex">
+    <div className="h-full flex flex-col">
+      <div className="overflow-hidden rounded-lg flex-1" ref={emblaRef}>
+        <div className="flex h-full">
           {images.map((src, idx) => (
-            <div className="min-w-0 flex-[0_0_100%] aspect-video flex items-center justify-center bg-muted/20" key={src}>
-              <img src={src} alt="Proyecto" className="object-contain w-full h-full" />
+            <div className="min-w-0 flex-[0_0_100%] h-full flex items-center justify-center bg-muted/20 rounded-lg overflow-hidden" key={src}>
+              <img src={src} alt="Proyecto" className="h-full w-auto max-w-none object-contain rounded-lg" />
             </div>
           ))}
         </div>
@@ -59,14 +59,37 @@ const ProjectSection = () => {
   const projects = [
     {
       id: 1,
-      title: 'Mucama',
-      category: 'Plataforma Hotelera',
-      description: 'Mucama es un Saas para hoteles que optimiza la gestión de lavandería y ropa blanca de forma simple, rápida y eficiente.',
-      images: ['/mucama-screen.png', '/mucama-screen2.png'],
-      url: 'https://www.mucama.cl/'
+      title: 'Menuo',
+      category: 'Plataforma de Restaurantes',
+      description: 'Menuo digitaliza la carta y la experiencia de pedidos para restaurantes, mejorando la atencion y la conversion.',
+      image: '/menuo.png',
+      url: 'https://menuo.cl/'
     },
     {
       id: 2,
+      title: 'Cresia',
+      category: 'Plataforma de Gestion',
+      description: 'Cresia optimiza procesos operativos y comerciales con una interfaz simple, enfocada en crecimiento y eficiencia.',
+      image: '/cresia.png',
+      url: 'https://cresia.cl/'
+    },
+    {
+      id: 3,
+      title: 'Ventosa',
+      category: 'Solucion Digital',
+      description: 'Ventosa potencia negocios con soluciones web modernas orientadas a resultados, rendimiento y escalabilidad.',
+      image: '/ventosa.png',
+      url: 'https://ventosa.cl/'
+    },
+    {
+      id: 4,
+      title: 'Volaria',
+      category: 'Plataforma de Viajes',
+      description: 'Volaria planifica vuelos, hoteles, itinerarios y experiencias en un solo lugar, potenciado por inteligencia artificial.',
+      images: ['/volaria-screen.png', '/volaria-screen2.png']
+    },
+    {
+      id: 5,
       title: 'Peirum',
       category: 'Plataforma Hotelera',
       description: 'Peirum es una plataforma integral para pequeños hoteles que centraliza la gestión de reservas, ventas y operaciones en una interfaz moderna e intuitiva.',
@@ -74,21 +97,15 @@ const ProjectSection = () => {
       url: 'https://peirum.github.io/home/'
     },
     {
-      id: 3,
-      title: 'Volaria',
-      category: 'Plataforma de Viajes',
-      description: 'Volaria planifica vuelos, hoteles, itinerarios y experiencias en un solo lugar, potenciado por inteligencia artificial.',
-      images: ['/volaria-screen.png', '/volaria-screen2.png']
+      id: 6,
+      title: 'Mucama',
+      category: 'Plataforma Hotelera',
+      description: 'Mucama es un Saas para hoteles que optimiza la gestión de lavandería y ropa blanca de forma simple, rápida y eficiente.',
+      images: ['/mucama-screen.png', '/mucama-screen2.png'],
+      url: 'https://www.mucama.cl/'
     },
     {
-      id: 4,
-      title: 'Punto de Venta',
-      category: 'Sistema de Gestión',
-      description: 'Simplifica la toma de pedidos, el control de mesas y las ventas en tu hotel o restaurante, todo en un solo lugar.',
-      images: ['/pos-screen.png', '/pos-screen2.png']
-    },
-    {
-      id: 5,
+      id: 7,
       title: 'Kaja',
       category: 'Tecnología IoT',
       description: 'Kaja es un módulo inteligente creado en pandemia que detecta la proximidad de personas para fomentar el distanciamiento físico de forma visual y precisa.',
@@ -96,7 +113,7 @@ const ProjectSection = () => {
       url: 'https://github.com/lucasmoya/kaja'
     },
     {
-      id: 6,
+      id: 8,
       title: 'DXTEC1',
       category: 'Tecnología IoT',
       description: 'Este módulo inteligente detecta la temperatura del agua y alerta a personas con sensibilidad reducida en las extremidades, mejorando la autonomía.',
@@ -126,14 +143,14 @@ const ProjectSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project) => {
             const ProjectImage = (
-              <div className="aspect-video bg-gradient-card rounded-lg mb-4 sm:mb-6 overflow-hidden flex items-center justify-center p-4 sm:p-6">
+              <div className="h-56 sm:h-64 lg:h-72 bg-gradient-card rounded-lg mb-4 sm:mb-6 overflow-hidden flex items-center justify-center p-4 sm:p-6">
                 {project.images ? (
                   <ProjectImageSlider images={project.images} />
                 ) : project.image ? (
                   <img
                     src={project.image}
                     alt={`${project.title} preview`}
-                    className="object-cover w-full h-full rounded-lg"
+                    className="h-full w-auto max-w-none rounded-lg object-contain"
                   />
                 ) : (
                   <div className="w-full h-full bg-muted/20 flex items-center justify-center">
