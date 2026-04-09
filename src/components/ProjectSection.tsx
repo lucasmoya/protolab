@@ -60,24 +60,24 @@ const ProjectSection = () => {
     {
       id: 1,
       title: 'Menuo',
-      category: 'Plataforma de Restaurantes',
-      description: 'Menuo digitaliza la carta y la experiencia de pedidos para restaurantes, mejorando la atencion y la conversion.',
+      category: 'Plataforma Gastronómica',
+      description: 'Menuo gestiona restaurantes, bares y cafeterías con herramientas integradas de ventas, operación y analítica en tiempo real.',
       image: '/menuo.png',
       url: 'https://menuo.cl/'
     },
     {
       id: 2,
       title: 'Cresia',
-      category: 'Plataforma de Gestion',
-      description: 'Cresia optimiza procesos operativos y comerciales con una interfaz simple, enfocada en crecimiento y eficiencia.',
+      category: 'Copiloto Financiero',
+      description: 'Cresia centraliza y analiza tus finanzas en un solo lugar, entregando insights y automatizaciones inteligentes para tomar mejores decisiones económicas.',
       image: '/cresia.png',
-      url: 'https://cresia.cl/'
+      url: 'https://app.cresia.cl/'
     },
     {
       id: 3,
       title: 'Ventosa',
-      category: 'Solucion Digital',
-      description: 'Ventosa potencia negocios con soluciones web modernas orientadas a resultados, rendimiento y escalabilidad.',
+      category: 'Plataforma BPMN',
+      description: 'Ventosa modela y gestiona procesos empresariales con BPMN en la nube, permitiendo diseñar flujos complejos de forma visual.',
       image: '/ventosa.png',
       url: 'https://ventosa.cl/'
     },
