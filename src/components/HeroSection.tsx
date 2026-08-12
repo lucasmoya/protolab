@@ -29,12 +29,12 @@ const HeroSection = () => {
         <div className="mb-8 sm:mb-12 mt-0 sm:mt-0 transform -translate-y-16 sm:translate-y-0">
           <div className="flex flex-col items-center w-full">
             <div className="w-full flex flex-row items-center justify-between">
-              <span className="text-[2.5rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem] xl:text-[8rem] font-black text-white leading-none tracking-tight uppercase">  DESARROLLO</span>
+              <span className="text-[2.5rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem] xl:text-[8rem] font-black text-white leading-none tracking-tight uppercase">  DISEÑO</span>
               <span className="flex-1 border-b-4 border-white mx-4 md:mx-8" style={{ minWidth: '40px' }}></span>
               <span className="text-[2.5rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem] xl:text-[8rem] font-black text-white leading-none tracking-tight uppercase">WEB</span>
             </div>
             <div className="w-full flex justify-center mt-2">
-              <span className="text-[2.5rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem] xl:text-[8rem] font-black text-white leading-none tracking-tight uppercase">.</span>
+              <span className="text-[2.5rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem] xl:text-[8rem] font-black text-white leading-none tracking-tight uppercase"></span>
             </div>
           </div>
         </div>
